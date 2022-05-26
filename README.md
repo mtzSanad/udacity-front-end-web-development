@@ -79,3 +79,60 @@ I hope to learn about...
 
 * Missing closing tags
 * qutation errors
+
+## Java script and DOm
+
+### Document Object Model
+
+- HTML and css are static, js can control them and make it dynamic
+- DOM,  Modifying page, browser event and performance
+
+### DOM
+- document.getElementById('footer') not document.getElementById('#footer')
+- Multi select .getElementByClassName or ByTagName
+- The return of multi is not array it is html collection
+- $0
+- .querySelector() return first single element
+- .querySelectorAll()
+- Interface Node, Element
+
+### Creating content with JS
+- JS DOM delete, create and manipulate
+- .innerHTML, textContent, innerText
+- innertHTML property exists in any Element and it is responsible of element full html tags and it returns a string.
+- inner select the inner of the tag
+- outerHTML select the tag it self
+- textContent only display the text content
+- innerText dosen't show hidden, it shows what you see visually
+- x = document.createElement('span')
+- x.textContent = 'adsfasdf'
+- .appendChild() it needs an element
+- 
+- const myPara = document.createElement('p');
+const textOfParagraph = document.createTextNode('I am the text for the paragraph!');
+
+myPara.appendChild(textOfParagraph);
+document.body.appendChild(myPara);
+
+SAME AS
+
+const myPara = document.createElement('p');
+
+myPara.textContent = 'I am the text for the paragraph!';
+document.body.appendChild(myPara);
+- appendChild moves the element from its current position to new one
+- .insertAdjacentHTML() two argument the location of the HTML , the HTML text that is going to be inserted
+<!-- beforebegin -->
+<p>
+    <!-- afterbegin -->
+    Existing text/HTML content
+    <!-- beforeend -->
+</p>
+<!-- afterend -->
+
+- .removeChild() | 
+
+const mainHeading = document.querySelector('h1');
+
+mainHeading.parentElement.removeChild(mainHeading);
+
